@@ -19,7 +19,7 @@ app.use("/api" , MainRouter)
 
 
 
-app.listen(8080,async()=>{
+app.listen(10000,async()=>{
     toConnectDb()
-    console.log("Server is running at http://localhost:8080/")
+    console.log("Server is running at http://localhost:10000/")
 })
