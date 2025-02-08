@@ -36,7 +36,7 @@ const SignInUser = async (req,res)=>{
                     res.status(500).json({"msg":"there has been an error" ,err})
                 }
                 const token =await jwt.sign({ emailID: email }, 'MASAI');
-                res.status(200).send({"token":token})
+                res.status(200).json({"token":token})
                 
             });
         }else{

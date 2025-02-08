@@ -5,10 +5,17 @@ const { default: mongoose } = require("mongoose");
 const {toConnectDb} = require("./config")
 
 const {MainRouter} = require("./routes/index")
+const cors = require("cors");
 
 const app = express();
 
 app.use(express.json())
+
+app.use(cors({
+    origin:'https://productbackend-ogse.onrender.com/',
+    methods:['GET','POST' ,'PUT','DELETE'],
+    credentials:true,
+}))
 
 
 app.get('/',(req,res)=>{
