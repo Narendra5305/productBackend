@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json())
 
 app.use(cors({
-    origin:'https://productbackend-ogse.onrender.com/',
+    origin:'http://localhost:10000/',
     methods:['GET','POST' ,'PUT','DELETE'],
     credentials:true,
 }))
